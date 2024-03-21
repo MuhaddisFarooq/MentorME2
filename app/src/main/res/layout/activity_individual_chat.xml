@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDF7F7">
+
+    <RelativeLayout
+        android:id="@+id/upperSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#50C1C8">
+
+
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="75dp"
+            android:layout_height="73dp"
+            android:layout_alignParentStart="true"
+            android:padding="16dp"
+            android:src="@mipmap/arrow_foreground" />
+
+        <TextView
+            android:id="@+id/tvChatName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:layout_toEndOf="@id/ivBack"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"/>
+
+
+
+        <ImageView
+            android:id="@+id/ivCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/phone"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="48dp"
+            android:layout_centerVertical="true"
+             />
+
+        <ImageView
+            android:id="@+id/ivVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/video"
+            android:layout_toStartOf="@id/ivCall"
+            android:layout_marginEnd="16dp"
+            android:layout_centerVertical="true"
+             />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChatMessages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/bottomSection"
+        android:layout_below="@+id/upperSection"
+        android:clipToPadding="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="2dp"
+        android:background="#167078"
+        app:menu="@drawable/navigation_menu" />
+
+    <RelativeLayout
+        android:id="@+id/bottomSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#50c3ca"
+        android:layout_above="@id/bottomNavigationView"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/ivAttachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/attachment" />
+
+        <ImageView
+            android:id="@+id/ivgallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gallery"
+            android:layout_toEndOf="@+id/ivAttachment"
+            android:layout_marginStart="8dp"
+            android:layout_centerVertical="true" />
+
+        <EditText
+            android:id="@+id/etChatInput"
+            android:layout_width="262dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="45dp"
+            android:layout_toStartOf="@+id/btnSend"
+            android:layout_toEndOf="@+id/ivgallery"
+            android:hint="Type something ..."
+            android:inputType="textMultiLine" />
+
+        <ImageView
+            android:id="@+id/ivCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-48dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@id/ivMic"
+            android:src="@drawable/camera" />
+
+        <ImageView
+            android:id="@+id/ivMic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_toStartOf="@id/btnSend"
+            android:src="@drawable/microphone"
+            android:clickable="true"
+            android:focusable="true"
+            />
+
+        <ImageView
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/send"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="Send"/>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

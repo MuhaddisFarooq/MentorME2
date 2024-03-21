@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">i210391</string>
+    <string name="resend_code_timer_finished">Resend code in 00:00</string>
+        <string name="favorite_mentor">Favorite Mentor</string>
+    <string name="screenshot_notification_channel_id">screenshot_alert_channel</string>
+    <string name="channel_name_screenshot">Screenshot Alerts</string>
+    <string name="channel_description_screenshot">Notifications for screenshot detection</string>
+
+    <string-array name="specialties_array">
+        <item>Filter</item>
+        <item>UI/UX Designer</item>
+        <item>Software Engineer</item>
+        <!-- Add more specialties as needed -->
+    </string-array>
+
+
+</resources>
+

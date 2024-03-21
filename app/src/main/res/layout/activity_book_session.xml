@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <View
+        android:id="@+id/viewUpperBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#50c1c8"
+        app:layout_constraintBottom_toTopOf="@id/guidelineHorizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/ivBackArrow"
+        android:layout_width="72dp"
+        android:layout_height="68dp"
+        android:layout_margin="16dp"
+        android:src="@mipmap/arrow_foreground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/tvBookSession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="48dp"
+        android:text="Book your Session"
+        android:textColor="@color/white"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/mentorProfileImage"
+        app:layout_constraintEnd_toStartOf="@+id/mentorProfileImage" />
+
+    <ImageView
+        android:id="@+id/mentorProfileImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/john"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMentorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="John Cooper"
+        android:textColor="@color/white"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/mentorProfileImage"
+        app:layout_constraintEnd_toStartOf="@+id/mentorProfileImage"
+        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mentorProfileImage"
+        app:layout_constraintVertical_bias="0.803" />
+
+
+    <TextView
+        android:id="@+id/tvSessionRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:text="$1500/Session"
+        android:textColor="#ffc909"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvMentorName"
+        app:layout_constraintTop_toBottomOf="@+id/tvMentorName" />
+
+    <LinearLayout
+        android:id="@+id/llIcons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="@+id/tvSessionRate"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSessionRate"
+        app:layout_constraintStart_toEndOf="@+id/tvSessionRate"
+        android:layout_marginStart="8dp">
+
+
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"/>
+
+    <!-- Calendar View -->
+    <CalendarView
+        android:id="@+id/CalendarView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/tvAvailableTimeSlots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Available Time Slots"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CalendarView" />
+
+    <LinearLayout
+        android:id="@+id/timeSlotsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/tvAvailableTimeSlots"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <!-- Time Slot Button 10:00 AM -->
+        <Button
+            android:id="@+id/btnTimeSlot1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00 AM"
+            android:backgroundTint="#ddf7f7"
+            android:textColor="@color/black"
+            android:layout_margin="4dp"/>
+
+        <!-- Time Slot Button 11:00 AM -->
+        <Button
+            android:id="@+id/btnTimeSlot2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#ddf7f7"
+            android:textColor="@color/black"
+            android:text="11:00 AM"
+            android:layout_margin="4dp"/>
+
+        <Button
+            android:id="@+id/btnTimeSlot3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#ddf7f7"
+            android:textColor="@color/black"
+            android:layout_margin="4dp"
+            android:text="12:00 PM" />
+
+        <!-- Time Slot Button 12:00 PM -->
+
+        <!-- Add more time slots as needed -->
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnBookAppointment"
+        android:layout_width="227dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="88dp"
+        android:backgroundTint="#50c1c8"
+        android:text="Book An Appointment"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAvailableTimeSlots" />
+
+    <ImageView
+        android:id="@+id/ivIcon3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/video"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvSessionRate"
+        app:layout_constraintBottom_toBottomOf="@+id/tvSessionRate"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginEnd="16dp" />
+
+    <ImageView
+        android:id="@+id/ivIcon2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/phone"
+        app:layout_constraintEnd_toStartOf="@+id/ivIcon3"
+        app:layout_constraintTop_toTopOf="@+id/ivIcon3"
+        app:layout_constraintBottom_toBottomOf="@+id/ivIcon3"
+        android:layout_marginEnd="8dp" />
+
+    <ImageView
+        android:id="@+id/ivIcon1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/chat"
+        app:layout_constraintEnd_toStartOf="@+id/ivIcon2"
+        app:layout_constraintTop_toTopOf="@+id/ivIcon2"
+        app:layout_constraintBottom_toBottomOf="@+id/ivIcon2"
+        android:layout_marginEnd="8dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

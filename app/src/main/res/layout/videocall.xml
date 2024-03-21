@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cbcbcb">
+
+    <!-- Top control bar -->
+
+
+    <FrameLayout
+        android:id="@+id/videoPreviewPlaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ButtonsContainer">
+
+
+        <View
+            android:id="@+id/smallWhiteContainer"
+            android:layout_width="93dp"
+            android:layout_height="151dp"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#FFFFFF" />
+
+        <RelativeLayout
+            android:id="@+id/topControlBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ddf7f7"
+            android:padding="16dp">
+
+
+            <TextView
+                android:id="@+id/hdrText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="50:08"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+
+        </RelativeLayout>
+    </FrameLayout>
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/ButtonsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:background="#ddf7f7">
+
+
+
+        <ImageView
+            android:id="@+id/micmute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="94dp"
+            android:padding="16dp"
+            android:src="@drawable/mute_mic" />
+
+        <ImageView
+            android:id="@+id/videomuteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="211dp"
+            android:padding="16dp"
+            android:src="@drawable/mute" />
+
+        <ImageView
+            android:id="@+id/rotatebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="152dp"
+            android:padding="16dp"
+            android:src="@drawable/rotate" />
+
+        <ImageView
+            android:id="@+id/Cross"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="99dp"
+            android:padding="16dp"
+            android:src="@drawable/cross" />
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

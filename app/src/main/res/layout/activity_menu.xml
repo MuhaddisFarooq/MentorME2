@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#d6efef">
+    <TextView
+        android:id="@+id/greetingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:textSize="24sp"
+        android:text="Hello, Ali" />
+
+    <TextView
+        android:id="@+id/mentorshipJourneyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/greetingTextView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="17sp"
+        android:text="Ready for mentorship? Let's begin the journey!"
+        android:textColor="#147076" />
+
+    <ImageView
+        android:id="@+id/notificationIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+        android:src="@mipmap/not_round" />
+
+    <TextView
+        android:id="@+id/mentorsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notificationIcon"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="55dp"
+        android:text="Top Mentors"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mentorsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/mentorsTitle"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <TextView
+        android:id="@+id/mentorsTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mentorsRecyclerView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Education Mentors"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mentorsRecyclerView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mentorsTitle2"
+        android:layout_marginTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+
+    <TextView
+        android:id="@+id/mentorsTitle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mentorsRecyclerView2"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Recent Mentors"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mentorsRecyclerView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mentorsTitle3"
+        android:layout_marginTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </RelativeLayout>
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:layout_alignParentBottom="true"
+        android:background="#167078"
+        android:elevation="16dp"
+        app:menu="@drawable/navigation_menu" />
+
+</LinearLayout>

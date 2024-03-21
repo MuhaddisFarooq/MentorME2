@@ -1,0 +1,156 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ddf7f7">
+
+    <RelativeLayout
+        android:id="@+id/headerSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#50c1c8"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ivBackArrow"
+            android:layout_width="78dp"
+            android:layout_height="79dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="-12dp"
+            android:src="@mipmap/arrow_foreground" />
+
+        <TextView
+            android:id="@+id/tvEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Edit Profile"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+
+
+
+    <ImageView
+        android:id="@+id/ivProfileIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/headerSection"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-17dp"
+        android:src="@mipmap/profile_john" />
+
+    <LinearLayout
+        android:id="@+id/llFormSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivProfileIcon"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:text="Name"
+            android:textColor="#147076"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="Enter Name"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:text="Email"
+            android:textColor="#147076"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="Enter Email"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:text="Contact"
+            android:textColor="#147076"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editTextContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="Enter Contact"
+            android:textColor="#000000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:text="Country"
+            android:textColor="#147076"
+            android:textSize="24sp" />
+
+
+        <Spinner
+            android:id="@+id/spinnerCountry"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/edit_text_background"
+            android:textColor="#000000" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:text="City"
+            android:textColor="#147076"
+            android:textSize="24sp" />
+
+
+
+        <Spinner
+            android:id="@+id/spinnerCity"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/edit_text_background"
+            android:textColor="#000000" />
+
+
+        <Button
+            android:id="@+id/btnUpdateProfile"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#147076"
+            android:text="Update Profile"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</RelativeLayout>

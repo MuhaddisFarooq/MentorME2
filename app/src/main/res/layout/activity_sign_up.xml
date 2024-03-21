@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cce7f8">
+
+    <TextView
+        android:id="@+id/tvMentorMe"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="mentorme"
+        android:textSize="48sp"
+        android:textColor="#ffa726"
+        android:fontFamily="@font/roboto_medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"/>
+
+
+    <LinearLayout
+        android:id="@+id/loginContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:background="#50c1c8"
+        app:layout_constraintTop_toBottomOf="@+id/guideline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Getting Started"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+
+            />
+
+
+        <!-- Label for name -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="24sp"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="2dp"/>
+        <!-- name Input -->
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Name"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/edit_text_background"
+            android:textColor="#000000"
+            />
+
+
+        <!-- Label for email -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="24sp"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="2dp"/>
+
+        <!-- email Input -->
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Email"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/edit_text_background"
+            android:textColor="#000000"
+            />
+
+        <!-- Label for contact  -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact"
+            android:textSize="24sp"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="2dp"/>
+
+        <!-- contact Input -->
+        <EditText
+            android:id="@+id/editTextContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Contact"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/edit_text_background"
+            android:textColor="#000000"
+            />
+
+        <!-- Label for country-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Country"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:layout_marginBottom="2dp"/>
+
+
+
+        <Spinner
+            android:id="@+id/spinnerCountry"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/edit_text_background"
+            android:textColor="#000000"
+            />
+
+
+
+        <!-- Label for city-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="City"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:layout_marginBottom="2dp"/>
+
+
+
+        <Spinner
+            android:id="@+id/spinnerCity"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/edit_text_background"
+            android:textColor="#000000"
+            />
+
+        <!-- Label for pass -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textSize="24sp"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="2dp"/>
+
+        <!-- passs Input -->
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/edit_text_background"
+            android:textColor="#000000"
+            />
+
+
+        <Button
+            android:id="@+id/buttonSignUp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:backgroundTint="#ffffff"
+            android:textColor="#7cd0d6"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            />
+
+
+    </LinearLayout>
+
+    <!-- Sign Up Prompt -->
+    <TextView
+        android:id="@+id/tvLogInPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already Have an account? Log In"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="22sp"
+        android:layout_marginBottom="20dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

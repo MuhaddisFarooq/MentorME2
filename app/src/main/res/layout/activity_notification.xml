@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ddf7f7">
+
+    <RelativeLayout
+        android:id="@+id/headerSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ddf7f7"
+        android:elevation="4dp"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ivBackArrow"
+            android:layout_width="74dp"
+            android:layout_height="62dp"
+            android:src="@mipmap/arrow_foreground" />
+
+        <!-- Notification Title -->
+        <TextView
+            android:id="@+id/tvNotificationsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Notifications"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <!-- Notification Icon -->
+        <ImageView
+            android:id="@+id/ivNotificationIcon"
+            android:layout_width="49dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:src="@mipmap/not" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvClearAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerSection"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="25dp"
+        android:textColor="#e7c83e"
+        android:text="Clear All"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <ListView
+        android:id="@+id/lvNotifications"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tvClearAll"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        android:listSelector="@android:color/transparent" />
+
+</RelativeLayout>

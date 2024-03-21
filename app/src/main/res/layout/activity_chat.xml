@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d6efef">
+
+
+
+    <ImageView
+        android:id="@+id/ivBackArrow"
+        android:layout_width="53dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@mipmap/arrow_foreground" />
+
+    <TextView
+        android:id="@+id/tvChatsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivBackArrow"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="-37dp"
+        android:text="Chats"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvMyCommunity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Community"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:layout_below="@id/tvChatsLabel"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#000000" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCommunityIcons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvMyCommunity"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <TextView
+        android:id="@+id/tvAllMessages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Messages"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:layout_below="@id/rvCommunityIcons"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textColor="#000000" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChatItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAllMessages"
+        android:layout_marginTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#167078"
+        app:menu="@drawable/navigation_menu" />
+</RelativeLayout>

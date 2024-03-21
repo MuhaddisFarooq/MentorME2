@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="170dp"
+    android:layout_height="220dp"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#ffffff"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+
+
+        <ImageView
+            android:id="@+id/ivMentorImage"
+            android:layout_width="match_parent"
+            android:layout_height="122dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvMentorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="John Cooper" />
+
+
+        <TextView
+            android:id="@+id/tvMentorDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="UI/UX Designer" />
+
+
+        <TextView
+        android:id="@+id/tvMentorPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$1000"
+            android:textColor="#FFD700"
+            android:textSize="18sp"
+            android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ivMentorImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvMentorDescription"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/heart"
+            app:layout_constraintStart_toEndOf="@+id/tvMentorPrice"
+            app:layout_constraintTop_toBottomOf="@+id/tvMentorPrice"
+            android:layout_marginLeft="140dp"
+            />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

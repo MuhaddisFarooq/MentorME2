@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="circle_color">#FF0000</color>
+    <color name="rounded_corner_bg_color">#50c3ca</color>
+    <color name="spinner_txt_color">#b0a3b4</color>
+    <color name="link_color">#167078</color>
+
+    <color name="timeSlotSelected">#FFDFDFDF</color>
+    <color name="timeSlotNormal">#FFFFFFFF</color>
+</resources>

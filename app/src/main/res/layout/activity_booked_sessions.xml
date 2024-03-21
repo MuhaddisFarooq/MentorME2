@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ddf7f7">
+
+    <RelativeLayout
+        android:id="@+id/headerSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ddf7f7"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ivBackArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="79dp"
+            android:src="@mipmap/arrow_foreground" />
+
+        <TextView
+            android:id="@+id/tvBookedSessions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Booked Session"
+            android:textColor="#36878c"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lvBookedSessions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerSection"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:listSelector="@android:color/transparent" />
+
+</RelativeLayout>

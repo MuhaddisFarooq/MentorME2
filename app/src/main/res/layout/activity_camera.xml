@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#fff">
+
+
+<FrameLayout
+    android:id="@+id/cameraPreviewPlaceholder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/captureButtonContainer">
+
+    <RelativeLayout
+        android:id="@+id/topControlBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ddf7f7"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/closeCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cross" />
+
+        <TextView
+            android:id="@+id/hdrText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="HDR"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <ImageView
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/settings" />
+    </RelativeLayout>
+</FrameLayout>
+
+<LinearLayout
+    android:id="@+id/modeSelectionBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/captureButtonContainer"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="#ddf7f7"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/slowMo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Slo-mo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Video"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Photo"
+        android:textColor="#63adb1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/square"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Square"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/portrait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Portrait"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />    <!-- ... -->
+</LinearLayout>
+
+<RelativeLayout
+    android:id="@+id/captureButtonContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:gravity="center_horizontal"
+    android:background="#ddf7f7">
+
+    <ImageView
+        android:id="@+id/gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="68dp"
+        android:padding="16dp"
+        android:src="@drawable/gallery" />
+
+    <ImageView
+        android:id="@+id/captureButton"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/oval" />
+
+    <ImageView
+        android:id="@+id/videoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="64dp"
+        android:padding="16dp"
+        android:src="@drawable/video" />
+</RelativeLayout>
+
+</RelativeLayout>

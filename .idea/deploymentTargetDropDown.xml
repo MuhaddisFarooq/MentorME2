@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="deploymentTargetDropDown">
+    <value>
+      <entry key="FirebaseAuthTest">
+        <State />
+      </entry>
+      <entry key="FirebaseDatabaseTest">
+        <State />
+      </entry>
+      <entry key="FirestoreEmulatorTest">
+        <State />
+      </entry>
+      <entry key="LoginActivityTest">
+        <State />
+      </entry>
+      <entry key="Tests in 'com.example.muhaddis_i210391'">
+        <State />
+      </entry>
+      <entry key="app">
+        <State />
+      </entry>
+    </value>
+  </component>
+</project>

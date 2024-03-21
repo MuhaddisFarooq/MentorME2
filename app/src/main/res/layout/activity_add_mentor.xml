@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/upperSection"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ddf7f7"
+        app:layout_constraintBottom_toBottomOf="@+id/guidelineHorizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/lowerSection"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#50c1c8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
+
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="81dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:src="@mipmap/arrow_foreground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAddNewMentor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="28dp"
+        android:text="Add New Mentor"
+        android:textColor="#50c1c8"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBack" />
+
+
+    <TextView
+        android:id="@+id/tvHelpUsExpand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="8dp"
+        android:text="Help us expand!"
+        android:textColor="#50c1c8"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/tvAddNewMentor"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddNewMentor" />
+
+
+    <Button
+        android:id="@+id/btnUploadVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="8dp"
+        android:drawableLeft="@drawable/video"
+        android:backgroundTint="@color/white"
+        android:text="Upload Video"
+        android:textColor="#50c1c8"
+        app:layout_constraintEnd_toStartOf="@+id/btnUploadPhoto"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHelpUsExpand" />
+
+    <Button
+        android:id="@+id/btnUploadPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="120dp"
+        android:drawableLeft="@drawable/photo"
+        android:backgroundTint="@color/white"
+        android:text="Upload Photo"
+        android:textColor="#50c1c8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnUploadVideo"
+        app:layout_constraintTop_toBottomOf="@+id/tvHelpUsExpand" />
+
+    <!-- Placeholder image -->
+
+
+
+    <EditText
+        android:id="@+id/etMentorName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Enter Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddNewMentor" />
+
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Description"
+        android:background="@drawable/edit_text_background"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/etMentorName"
+        app:layout_constraintStart_toStartOf="@+id/etMentorName"
+        app:layout_constraintEnd_toEndOf="@+id/etMentorName" />
+
+
+    <EditText
+        android:id="@+id/etPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Price"
+        android:background="@drawable/edit_text_background"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/etDescription"
+        app:layout_constraintStart_toStartOf="@+id/etDescription"
+        app:layout_constraintEnd_toEndOf="@+id/etDescription" />
+
+
+
+    <Button
+        android:id="@+id/btnUpload"
+        android:layout_width="117dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#147076"
+        android:text="Upload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDescription" />
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#167078"
+        app:menu="@drawable/navigation_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

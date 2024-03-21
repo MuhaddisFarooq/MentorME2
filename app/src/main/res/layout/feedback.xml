@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/upperSection"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#50c1c8"
+        app:layout_constraintBottom_toBottomOf="@+id/guidelineHorizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/lowerSection"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ddf7f7"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"/>
+
+
+
+    <TextView
+        android:id="@+id/tvHiIm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="80dp"
+        android:text="Hi, I'm"
+        android:fontFamily="@font/roboto_medium"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/mentorProfileImage"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/mentorProfileImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/john"
+        app:layout_constraintBottom_toBottomOf="@+id/upperSection"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMentorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="John Cooper"
+        android:fontFamily="@font/roboto_medium"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#ffffff"
+        app:layout_constraintStart_toStartOf="@+id/tvHiIm"
+        app:layout_constraintTop_toBottomOf="@+id/tvHiIm" />
+
+    <TextView
+        android:id="@+id/tvDropReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Drop me a review"
+        android:fontFamily="@font/roboto_medium"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        app:layout_constraintStart_toStartOf="@+id/tvMentorName"
+        app:layout_constraintTop_toBottomOf="@+id/tvMentorName"
+        android:layout_marginTop="16dp"/>
+
+
+
+    <EditText
+        android:id="@+id/etReviewInput"
+        android:layout_width="match_parent"
+        android:layout_height="166dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/edit_text_background"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Type your experience"
+        android:inputType="textMultiLine"
+        android:minHeight="100dp"
+        android:gravity="top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDropReview"
+
+
+
+
+        />
+
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/CustomRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="56dp"
+        android:isIndicator="false"
+        android:numStars="5"
+        android:rating="0"
+        android:stepSize="1"
+        app:layout_constraintStart_toStartOf="@id/etReviewInput"
+        app:layout_constraintTop_toBottomOf="@id/etReviewInput" />
+
+    <Button
+        android:id="@+id/btnSubmitFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="94dp"
+        android:backgroundTint="#167078"
+        android:gravity="center_horizontal|center_vertical"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="Submit Feedback"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ratingBar" />
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="76dp"
+        android:layout_height="67dp"
+        android:padding="16dp"
+        android:src="@mipmap/arrow_foreground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

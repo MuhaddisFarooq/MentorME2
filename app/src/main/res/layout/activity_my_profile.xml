@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ddf7f7">
+
+
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="53dp"
+        android:layout_height="34dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="354dp"
+        android:src="@mipmap/arrow_foreground" />
+
+
+
+    <TextView
+        android:id="@+id/tvMyProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Profile"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <RelativeLayout
+
+        android:id="@+id/myProfileSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        >
+
+        <ImageView
+            android:id="@+id/ivCoverPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:adjustViewBounds="true"
+            android:onClick="onCoverPhotoClick"
+            android:scaleType="centerCrop" />
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="53dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/edit" />
+
+
+
+    </RelativeLayout>
+
+    <!-- Profile Info Section -->
+    <RelativeLayout
+        android:id="@+id/profileInfoSection"
+        android:layout_width="match_parent"
+        android:layout_height="244dp"
+        android:layout_below="@id/myProfileSection"
+        android:layout_marginTop="-34dp"
+        android:gravity="start"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+
+        <ImageView
+            android:id="@+id/ivProfilePic"
+            android:layout_width="96dp"
+            android:layout_height="86dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="14dp"
+            android:src="@mipmap/profile_john" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivProfilePic"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp"
+            android:text="Ali"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvName"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="-5dp"
+            android:text="Islamabad"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textSize="23sp" />
+
+        <Button
+            android:id="@+id/btnBookedSessions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLocation"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:backgroundTint="#ffc909"
+            android:text="Booked Sessions"
+            android:textColor="#147076"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <!-- Favorite Mentors Section -->
+    <TextView
+        android:id="@+id/favmentor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileInfoSection"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="-20dp"
+        android:textSize="20sp"
+        android:text="Favourite Mentor"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFavoriteMentors"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileInfoSection"
+        android:layout_marginTop="5dp"
+         />
+
+    <!-- Reviews Section -->
+    <TextView
+        android:id="@+id/reviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rvFavoriteMentors"
+        android:layout_marginTop="-1dp"
+        android:layout_marginStart="18dp"
+        android:textSize="20sp"
+        android:text="My Reviews"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvReviews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rvFavoriteMentors"
+        android:layout_marginTop="10dp"
+        android:padding="12dp"
+        />
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="#167078"
+        app:menu="@drawable/navigation_menu" />
+
+</RelativeLayout>

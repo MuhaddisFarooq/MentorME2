@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <resources>
+        <string-array name="status_array">
+            <item>Available</item>
+            <item>Unavailable</item>
+            <item>Busy</item>
+            <!-- Add more statuses as needed -->
+        </string-array>
+    </resources>
+
+
